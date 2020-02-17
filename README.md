@@ -5,7 +5,7 @@ Simple helpers in a single header file supporting Joe Walnes'
 
 ## ASSERT macros
 
-The tinytest.h framework provides the ASSERT macros `ASSERT()`,
+The tinytest.h framework provides the test macros `ASSERT()`,
 `ASSERT_EQUALS()`, `ASSERT_STRING_EQUALS()`. Tinyhelp.h adds these:
 
 *   `ASSERT_DOUBLE_CLOSE(a, b, tol)` for testing whether doubles `a` and `b`
