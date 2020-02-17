@@ -45,7 +45,7 @@
 static int
 doubles_are_close(double x, double y, double tol)
 {
-   return fabs(x - y) <= fabs(tol) ? 1 : 0;
+   return fabs(x - y) > fabs(tol) ? 0 : 1;
 }
 
 static int
