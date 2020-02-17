@@ -6,13 +6,13 @@ Simple helpers in a single header file supporting Joe Walnes'
 ## ASSERT macros
 
 The tinytest.h framework provides the ASSERT macros `ASSERT()`,
-`ASSERT\_EQUALS()`, `ASSERT\_STRING\_EQUALS()`. Tinyhelp.h adds these:
+`ASSERT_EQUALS()`, `ASSERT_STRING_EQUALS()`. Tinyhelp.h adds these:
 
-*   `ASSERT\_DOUBLE\_CLOSE(a, b, tol)` for testing whether doubles `a` and `b`
+*   `ASSERT_DOUBLE_CLOSE(a, b, tol)` for testing whether doubles `a` and `b`
     are within a tolerance of `tol`. Tested as `fabs(a - b) <= tol`.
-*   `ASSERT\_DOUBLE\_EQUALS(a, b)` for testing if the doubles `a` and `b` are
-    equal. Tested as `fabs(a - b) <= 2 * DBL\_EPSILON`.
-*   `ASSERT\_FILE\_EQUALS(a, b)` for testing if the contents of files `a` and
+*   `ASSERT_DOUBLE_EQUALS(a, b)` for testing if the doubles `a` and `b` are
+    equal. Tested as `fabs(a - b) <= 2 * DBL_EPSILON`.
+*   `ASSERT_FILE_EQUALS(a, b)` for testing if the contents of files `a` and
     `b` are the same.
 
 ## Functions
@@ -21,10 +21,10 @@ Tinyhelp.h also provides the helper functions:
 
 ```c
 
-     static void  fprintf\_test\_info(FILE *out, char *name, const char *info)
-     static int   doubles\_are\_close(double x, double y, double tol)`
-     static int   doubles\_are\_equal(double x, double y)
-     static int   files\_are\_equal(char *fn1, char *fn2)
+     static void  fprintf_test_info(FILE *out, char *name, const char *info)
+     static int   doubles_are_close(double x, double y, double tol)
+     static int   doubles_are_equal(double x, double y)
+     static int   files_are_equal(char *fn1, char *fn2)
 
 ```
 
