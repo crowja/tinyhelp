@@ -32,7 +32,6 @@ Tinyhelp.h also provides the function
      test_near_zero(void)
      {
         double      t = sin(0.0);
-        printf("t is %e\n", t);
         fprintf_test_info(stdout, "test_near_zero", "testing sin near zero");
         ASSERT_DOUBLE_EQUAL(0.0, t);  /* being really strict */
      }
@@ -41,7 +40,6 @@ Tinyhelp.h also provides the function
      test_near_pi(void)
      {
         double      t = sin(3.14159265);
-        printf("t is %e\n", t);
         fprintf_test_info(stdout, "test_near_pi", "testing sin near pi");
         ASSERT_DOUBLE_CLOSE(0.0, t, 0.001);
      }
