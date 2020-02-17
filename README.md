@@ -1,4 +1,4 @@
-# tinyhelp 0.1.0.
+# tinyhelp 0.2.0.
 
 Simple helpers supporting Joe Walnes'
 [tinytest.h](https://github.com/joewalnes/tinytest) C unit test framework.

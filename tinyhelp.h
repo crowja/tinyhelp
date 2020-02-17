@@ -1,6 +1,6 @@
 /**
  * @file tinyhelp.h
- * @version 0.1.0
+ * @version 0.2.0
  * @see https://github.com/crowja/tinyhelp
  * @date Sun Feb 16, 2020 11:18:06 PM CST
  * @copyright 2020 John A. Crow <crowja@gmail.com>
