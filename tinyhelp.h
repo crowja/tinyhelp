@@ -2,7 +2,7 @@
  * @file tinyhelp.h
  * @version 0.1.0
  * @see https://github.com/crowja/tinyhelp
- * @date
+ * @date Sun Feb 16, 2020 11:18:06 PM CST
  * @copyright 2020 John A. Crow <crowja@gmail.com>
  * @license Unlicense <http://unlicense.org/>
  * @brief Helpers supporting Joe Walnes' tinytest.h unit test framework.
