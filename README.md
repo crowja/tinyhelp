@@ -12,13 +12,21 @@ ASSERT\_STRING\_EQUALS(). Tinyhelp.h adds these:
     within a tolerance of tol. Tested as fabs(a - b) <= tol.
 *   ASSERT\_DOUBLE\_EQUAL(a, b) for testing if double a and b are equal. Tested
     as fabs(a - b) <= 2 * DBL\_EPSILON.
+*   ASSERT\_FILE\_EQUAL(a, b) for testing if the contents of files a and b are
+    are the same.
 
 ## Functions
 
-Tinyhelp.h also provides the function
+Tinyhelp.h also provides the helper functions:
 
-*   fprintf\_test\_info() for printing brief information about a unit test; see
-    below.
+```c
+
+     static void  fprintf\_test\_info(FILE *out, char *name, const char *info)
+     static int   doubles\_are\_close(double x, double y, double tol)`
+     static int   doubles\_are\_equal(double x, double y)
+     static int   files\_are\_equal(char *fn1, char *fn2)
+
+```
 
 ## Example
 
