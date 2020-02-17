@@ -23,31 +23,37 @@ Tinyhelp.h also provides the function
 ## Example
 
 ```c
-
-     #include <stdlib.h>
-     #include <stdio.h>
-     #include <math.h>                   /* we're testing the sine function */
+           . . .
+     
      #include "tinytest.h"
      #include "tinyhelp.h"
      
-     static void test01(void) {
-        double t = sin(0.0);
-        fprintf_test_info(stdout, "test01", "testing sin() at zero");
-        ASSERT_DOUBLE_EQUALS(0.0, t);    /* really strict at zero */
+     static void
+     test_near_zero(void)
+     {
+        double      t = sin(0.0);
+        printf("t is %e\n", t);
+        fprintf_test_info(stdout, "test_near_zero", "testing sin near zero");
+        ASSERT_DOUBLE_EQUAL(0.0, t);  /* being really strict */
      }
      
-     static void test02(void) {
-        double t = sin(3.14159265);
-        fprintf_test_info(stdout, "test02", "testing sin() near pi");
+     static void
+     test_near_pi(void)
+     {
+        double      t = sin(3.14159265);
+        printf("t is %e\n", t);
+        fprintf_test_info(stdout, "test_near_pi", "testing sin near pi");
         ASSERT_DOUBLE_CLOSE(0.0, t, 0.001);
      }
      
-     int main(void)
+     int
+     main(void)
      {
-        printf("%s\n", "My unit test suite for the sine function");
-        RUN(test01);
-        RUN(test02);
+        printf("%s\n", "My unit test suite");
+        RUN(test_near_zero);
+        RUN(test_near_pi);
         return TEST_REPORT();
      }
+
 
 ```
