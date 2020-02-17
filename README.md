@@ -5,15 +5,15 @@ Simple helpers in a single header file supporting Joe Walnes'
 
 ## ASSERT macros
 
-The tinytest.h framework provides the ASSERT macros ASSERT(), ASSERT\_EQUALS(),
-ASSERT\_STRING\_EQUALS(). Tinyhelp.h adds these:
+The tinytest.h framework provides the ASSERT macros `ASSERT()`,
+`ASSERT\_EQUALS()`, `ASSERT\_STRING\_EQUALS()`. Tinyhelp.h adds these:
 
-*   ASSERT\_DOUBLE\_CLOSE(a, b, tol) for testing whether doubles a and b are
-    within a tolerance of tol. Tested as fabs(a - b) <= tol.
-*   ASSERT\_DOUBLE\_EQUALS(a, b) for testing if the doubles a and b are equal.
-    Tested as `fabs(a - b) <= 2 * DBL\_EPSILON`.
-*   ASSERT\_FILE\_EQUALS(a, b) for testing if the contents of files a and b are
-    the same.
+*   `ASSERT\_DOUBLE\_CLOSE(a, b, tol)` for testing whether doubles `a` and `b`
+    are within a tolerance of `tol`. Tested as `fabs(a - b) <= tol`.
+*   `ASSERT\_DOUBLE\_EQUALS(a, b)` for testing if the doubles `a` and `b` are
+    equal. Tested as `fabs(a - b) <= 2 * DBL\_EPSILON`.
+*   `ASSERT\_FILE\_EQUALS(a, b)` for testing if the contents of files `a` and
+    `b` are the same.
 
 ## Functions
 
@@ -30,12 +30,11 @@ Tinyhelp.h also provides the helper functions:
 
 ## Example
 
-```c
-           . . .
-     
+```c . . .
+
      #include "tinytest.h"
      #include "tinyhelp.h"
-     
+
      static void
      test_near_zero(void)
      {
@@ -43,7 +42,7 @@ Tinyhelp.h also provides the helper functions:
         fprintf_test_info(stdout, "test_near_zero", "testing sin near zero");
         ASSERT_DOUBLE_EQUAL(0.0, t);  /* being really strict */
      }
-     
+
      static void
      test_near_pi(void)
      {
@@ -51,7 +50,7 @@ Tinyhelp.h also provides the helper functions:
         fprintf_test_info(stdout, "test_near_pi", "testing sin near pi");
         ASSERT_DOUBLE_CLOSE(0.0, t, 0.001);
      }
-     
+
      int
      main(void)
      {
@@ -60,6 +59,5 @@ Tinyhelp.h also provides the helper functions:
         RUN(test_near_pi);
         return TEST_REPORT();
      }
-
 
 ```
