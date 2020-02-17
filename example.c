@@ -9,7 +9,7 @@ test_near_zero(void)
    double      t = sin(0.0);
    printf("t is %e\n", t);
    fprintf_test_info(stdout, "test_near_zero", "testing sin near zero");
-   ASSERT_DOUBLE_EQUAL(0.0, t);  /* being really strict */
+   ASSERT_DOUBLE_EQUALS(0.0, t);  /* being really strict */
 }
 
 static void

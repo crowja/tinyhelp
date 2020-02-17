@@ -103,8 +103,8 @@ fprintf_test_info(FILE *out, char *name, const char *info)
    printf("\n");
 }
 
-#define ASSERT_DOUBLE_EQUAL(expected, actual) ASSERT((#actual), 1 == doubles_are_equal((expected), (actual)))
+#define ASSERT_DOUBLE_EQUALS(expected, actual) ASSERT((#actual), 1 == doubles_are_equal((expected), (actual)))
 #define ASSERT_DOUBLE_CLOSE(expected, actual, tol) ASSERT((#actual), 1 == doubles_are_close((expected), (actual), (tol)))
-#define ASSERT_FILE_EQUAL(expected, actual) ASSERT((#actual " and " #expected), 1 == files_are_equal((expected), (actual)))
+#define ASSERT_FILE_EQUALS(expected, actual) ASSERT((#actual " and " #expected), 1 == files_are_equal((expected), (actual)))
 
 #endif
